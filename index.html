@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="javaex.js"></script>
+<link rel="stylesheet" href="main.css">
+<style>
+
+.collapsible {
+    background-color:#6D4670  ;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #556;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #yellow;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2> Ellen G</h2>
+
+<p>Welcome:</p>
+<img src="nus.jpg" alt= "beyonce"> 
+<button class="collapsible">Bio</button>
+<div class="content">
+  <p>I am from Atlanta, Georgia. I’m 16 years old and a rising Junior. I have 2 sisters named Sara and Saba. In college, I would like to major in computer science. This summer, I’m doing Girls Who Code and so far I’m loving it :)).</p>
+</div>
+
+<button class="collapsible">Things I like Doing</button>
+<div class="content">
+  <p>On my free time, I like doing different things. For example:<p>
+<p>Swimming, Reading ,
+Hanging out with friends,
+Listening to music,
+Coding ,
+Watching <a href="https://www.youtube.com/"> YouTube</a> and etc. <P>
+
+</div>
+<button class="collapsible">Favorite Artist</button>
+<div class="content">
+  <p> I love listening to music and some of my favorite artists are Beyonce, Drake, Selena Gomez, Shawn Mendes, Cardi  B, and some Ethiopian musician.
+<div class="imageContainer">
+    <img src="beyonce.jpg" alt= "beyonce">
+</div>
+<button class="collapsible">Fun Facts!</button>
+<div class="content">
+  <P> *I am Ethiopian
+  <p> * I have never been to a concert before:(
+    <p>*One day, I would like to skydive.
+      <P> *My favorite food id pizzaa(yum).
+        <p> *I am ten years older than my youngest sister. <p>
+
+          <button onclick="document.getElementById('myImage').src='pizza1.jpg'">click here</button>
+
+  <img id="myImage" src="pizza2.jpg" style="width:100px">
+
+  <button onclick="document.getElementById('myImage').src='pizza2.jpg'">click here</button>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
