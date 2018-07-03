@@ -1,0 +1,14 @@
+h1 {
+    color:#CC28B2;
+    }
+
+  body {background-color: #D1B4DF;}
+  h1   {color: #9741C4;
+          text-align: center;}
+  p    {color: #4E1587;}
+
+
+  .imageContainer > img:hover {
+  width: 500px;
+  height: 200px;
+}
